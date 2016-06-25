@@ -44,10 +44,6 @@
   var setPackageConfig = System.packageWithIndex ? packIndex : packUmd;
   // Add package entries for angular packages
   ngPackageNames.forEach(setPackageConfig);
-  var config = {
-    map: map,
-    packages: packages
-  };
 
   // No umd for router yet
   packages['@angular/router'] = { main: 'index.js', defaultExtension: 'js' };
@@ -55,5 +51,9 @@
   // Forms not on rc yet
   packages['@angular/forms'] = { main: 'index.js', defaultExtension: 'js' };
 
+  var config = {
+    map: map,
+    packages: packages
+  };
   System.config(config);
 })(this);
