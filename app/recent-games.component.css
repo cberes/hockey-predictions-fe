@@ -6,3 +6,9 @@
 h3 {
   text-align: center; margin-bottom: 0;
 }
+.games {
+  background-color: #BBD8DC;
+  line-height: 1em;
+  padding: 0.8em 0.7em 0 0.7em;
+  border-radius: 4px 0 0 4px;
+}
