@@ -1,14 +1,14 @@
-<table>
+<table class="game">
   <tr>
     <td>{{game.home.team.location}}</td>
-    <td>{{game.home.prediction.score}}</td>
+    <td class="score">{{game.home.prediction.score}}</td>
   </tr>
   <tr>
     <td>{{game.away.team.location}}</td>
-    <td>{{game.away.prediction.score}}</td>
+    <td class="score">{{game.away.prediction.score}}</td>
   </tr>
   <tr>
-    <td>{{game.scheduled}}</td>
-    <th>Predicted</th>
+    <td>{{game.scheduled | date:'fullDate'}}</td>
+    <th class="score">Predicted</th>
   </tr>
 </table>
