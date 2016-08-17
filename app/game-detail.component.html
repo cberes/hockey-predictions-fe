@@ -1,17 +1,29 @@
 <table class="game">
   <tr>
-    <td>{{game.home.team.location}}</td>
-    <td class="score">{{game.home.score}}</td>
-    <td class="score">{{game.home.prediction.score}}</td>
-  </tr>
-  <tr>
-    <td>{{game.away.team.location}}</td>
+    <td colspan="2">{{game.away.team.location}}</td>
     <td class="score">{{game.away.score}}</td>
-    <td class="score">{{game.away.prediction.score}}</td>
   </tr>
   <tr>
-    <td>{{game.scheduled | date:'fullDate'}}</td>
+    <td colspan="2">{{game.home.team.location}}</td>
+    <td class="score">{{game.home.score}}</td>
+  </tr>
+  <tr>
+    <td colspan="2">{{game.scheduled | date:'fullDate'}}</td>
     <th class="score">Score</th>
-    <th class="score">Predicted</th>
+  </tr>
+  <tr>
+    <th></th>
+    <th>Predicted</th>
+    <th>Actual</th>
+  </tr>
+  <tr>
+    <th>Over-Under</th>
+    <td>{{game.prediction.overunder}}</td>
+    <td>{{game.home.score + game.away.score}}</td>
+  </tr>
+  <tr>
+    <th>Spread</th>
+    <td>{{game.prediction.spread}}</td>
+    <td>{{game.home.score - game.away.score}}</td>
   </tr>
 </table>

@@ -1,4 +1,4 @@
 export class Prediction {
-  score: number;
-  confidence: number;
+  overunder: number;
+  spread: number;
 }

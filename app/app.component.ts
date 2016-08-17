@@ -14,6 +14,10 @@ import { RecentGamesComponent } from './recent-games.component';
       <a [routerLink]="['Recent']">Recent</a>
     </nav>
     <router-outlet></router-outlet>
+    <div id="footer">
+      <p>We are not responsible for any gambling losses.</p>
+      <p>&copy; 2016 Corey Beres</p>
+    </div>
   `,
   styleUrls: ['app/app.component.css'],
   directives: [ROUTER_DIRECTIVES],
