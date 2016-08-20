@@ -17,6 +17,9 @@ import { RecentGamesComponent } from './recent-games.component';
     <router-outlet></router-outlet>
     <div id="footer">
       <p>
+        Follow us on <a href="https://twitter.com/hockeyscor_es">Twitter</a> for news and updates!
+      </p>
+      <p>
         &copy; 2016 Corey Beres.
         This site is not associated with any sports teams or leagues.
         These predictions are provided for entertainment only.
