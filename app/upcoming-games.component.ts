@@ -1,14 +1,14 @@
 import { Component, OnInit } from '@angular/core';
 
 import { Game } from './game';
-import { PredictionDetailComponent } from './prediction-detail.component';
+import { GameDetailComponent } from './game-detail.component';
 import { GameService } from './game.service';
 
 @Component({
   selector: 'upcoming-games',
   templateUrl: 'app/upcoming-games.component.html',
   styleUrls: ['app/upcoming-games.component.css'],
-  directives: [PredictionDetailComponent],
+  directives: [GameDetailComponent],
 })
 export class UpcomingGamesComponent implements OnInit {
   games: Game[];
