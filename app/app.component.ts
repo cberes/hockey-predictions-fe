@@ -16,8 +16,13 @@ import { RecentGamesComponent } from './recent-games.component';
     </nav>
     <router-outlet></router-outlet>
     <div id="footer">
-      <p>We are not responsible for any gambling losses.</p>
-      <p>&copy; 2016 Corey Beres</p>
+      <p>
+        &copy; 2016 Corey Beres.
+        This site is not associated with any sports teams or leagues.
+        These predictions are provided for entertainment only.
+        We make no guarantees about the outcomes of these games.
+        <a href="http://www.responsiblegambling.org/safer-play">Gamble responsibly.</a>
+      </p>
     </div>
   `,
   styleUrls: ['app/app.component.css'],
