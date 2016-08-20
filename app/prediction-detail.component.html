@@ -1,11 +1,19 @@
 <table class="game">
   <tr>
     <td>{{game.away.team.location}}</td>
-    <td class="score">{{game.prediction.away_score | number:'1.0-1'}}</td>
+    <td class="score">
+      <abbr title="{{game.prediction.away_score | number:'1.0-2'}}">
+        {{game.prediction.away_score | number:'1.0-0'}}
+      </abbr>
+    </td>
   </tr>
   <tr>
     <td>{{game.home.team.location}}</td>
-    <td class="score">{{game.prediction.home_score | number:'1.0-1'}}</td>
+    <td class="score">
+      <abbr title="{{game.prediction.home_score | number:'1.0-2'}}">
+        {{game.prediction.home_score | number:'1.0-0'}}
+      </abbr>
+    </td>
   </tr>
   <tr>
     <td>{{game.scheduled | date:'fullDate'}}</td>

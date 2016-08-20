@@ -11,3 +11,7 @@ table.game {
 td.score, th.score {
   text-align: center;
 }
+.score abbr {
+  text-decoration: none;
+  cursor: help;
+}
