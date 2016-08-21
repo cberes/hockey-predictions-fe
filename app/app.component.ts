@@ -17,7 +17,9 @@ import { RecentGamesComponent } from './recent-games.component';
     <router-outlet></router-outlet>
     <div id="footer">
       <p>
-        Follow us on <a href="https://twitter.com/hockeyscor_es">Twitter</a> for news and updates!
+        Follow us for news and updates:
+        <a href="https://twitter.com/hockeyscor_es">Twitter</a>
+        <a href="https://instagram.com/hockeyscor.es">Instagram</a>
       </p>
       <p>
         &copy; 2016 Corey Beres.
