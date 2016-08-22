@@ -1,7 +1,11 @@
 import { Component } from '@angular/core';
 import { ROUTER_DIRECTIVES } from '@angular/router';
+import { Title } from '@angular/platform-browser';
+
+import { MetaService } from 'ng2-meta';
 
 import { APP_CONFIG, HOCKEY_DI_CONFIG } from './app.config';
+import { META_CONFIG, META_DI_CONFIG } from './meta.config';
 import { GameService } from './game.service';
 
 @Component({
@@ -32,7 +36,10 @@ import { GameService } from './game.service';
   directives: [ROUTER_DIRECTIVES],
   providers: [
     { provide: APP_CONFIG, useValue: HOCKEY_DI_CONFIG },
+    { provide: META_CONFIG, useValue: META_DI_CONFIG },
     GameService,
+    Title,
+    MetaService,
   ],
 })
 export class AppComponent {
