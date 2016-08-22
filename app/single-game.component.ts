@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { RouteParams } from '@angular/router-deprecated';
+import { ActivatedRoute } from '@angular/router';
 
 import { Game } from './game';
 import { GameDetailComponent } from './game-detail.component';
@@ -12,17 +12,18 @@ import { GameService } from './game.service';
   directives: [GameDetailComponent],
 })
 export class SingleGameComponent implements OnInit {
-  id: number;
   title: string;
   games: Game[];
 
   constructor(private gameService: GameService,
-              private routeParams: RouteParams) { }
+              private route: ActivatedRoute) { }
 
   ngOnInit() {
-    this.id = +this.routeParams.get('id');
-    this.gameService.getGame(this.id).then(games => this.games = games);
-    this.title = 'Game #' + this.id;
+    this.route.params.subscribe(params => {
+      let id = +params['id'];
+      this.title = 'Game #' + id;
+      this.gameService.getGame(id).then(games => this.games = games);
+    });
   }
 }
 

@@ -9,6 +9,6 @@ export interface AppConfig {
 
 export const HOCKEY_DI_CONFIG: AppConfig = {
   apiEndpoint: 'localhost:3000',
-  protocolAndHost: 'https://localhost:4000',
+  protocolAndHost: 'https://hockeyscor.es',
 };
 
