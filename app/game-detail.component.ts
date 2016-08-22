@@ -9,5 +9,4 @@ import { Game } from './game';
 })
 export class GameDetailComponent {
   @Input() game: Game;
-  @Input() includeScore: boolean;
 }

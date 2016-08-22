@@ -5,6 +5,7 @@ import { APP_CONFIG, HOCKEY_DI_CONFIG } from './app.config';
 import { GameService } from './game.service';
 import { UpcomingGamesComponent } from './upcoming-games.component';
 import { RecentGamesComponent } from './recent-games.component';
+import { SingleGameComponent } from './single-game.component';
 
 @Component({
   selector: 'my-app',
@@ -49,6 +50,11 @@ import { RecentGamesComponent } from './recent-games.component';
     path: '/recent',
     name: 'Recent',
     component: RecentGamesComponent
+  },
+  {
+    path: '/game/:id',
+    name: 'Game',
+    component: SingleGameComponent
   }
 ])
 export class AppComponent {

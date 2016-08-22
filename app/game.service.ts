@@ -7,18 +7,19 @@ import { Game } from './game';
 
 @Injectable()
 export class GameService {
-  private recentUrl = 'games/recent';
-  private upcomingUrl = 'games/upcoming';
-
   constructor(private http: Http,
               @Inject(APP_CONFIG) private config: AppConfig) {}
 
   getRecentGames(): Promise<Game[]> {
-    return this.getGames(this.recentUrl);
+    return this.getGames('games/recent');
   }
 
   getUpcomingGames(): Promise<Game[]> {
-    return this.getGames(this.upcomingUrl);
+    return this.getGames('games/upcoming');
+  }
+
+  getGame(id: number): Promise<Game[]> {
+    return this.getGames('games/' + id);
   }
 
   private getGames(endpoint: string): Promise<Game[]> {

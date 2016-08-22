@@ -1,7 +1,7 @@
 <table class="game">
   <tr>
     <td>{{game.away.team.location}}</td>
-    <td class="score" *ngIf="includeScore">{{game.away.score}}</td>
+    <td class="score" *ngIf="game.status == 'F'">{{game.away.score}}</td>
     <td class="score">
       <abbr title="{{game.prediction.away_score | number:'1.0-2'}}">
         {{game.prediction.away_score | number:'1.0-0'}}
@@ -10,7 +10,7 @@
   </tr>
   <tr>
     <td>{{game.home.team.location}}</td>
-    <td class="score" *ngIf="includeScore">{{game.home.score}}</td>
+    <td class="score" *ngIf="game.status == 'F'">{{game.home.score}}</td>
     <td class="score">
       <abbr title="{{game.prediction.home_score | number:'1.0-2'}}">
         {{game.prediction.home_score | number:'1.0-0'}}
@@ -19,7 +19,7 @@
   </tr>
   <tr>
     <td>{{game.scheduled | date:'fullDate'}}</td>
-    <th class="score">Score</th>
-    <th class="score" *ngIf="includeScore">Predicted</th>
+    <th class="score" *ngIf="game.status == 'F'">Final</th>
+    <th class="score"><abbr title="Predicted">Pred.</abbr></th>
   </tr>
 </table>

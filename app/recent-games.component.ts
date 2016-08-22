@@ -6,11 +6,12 @@ import { GameService } from './game.service';
 
 @Component({
   selector: 'recent-games',
-  templateUrl: 'app/recent-games.component.html',
-  styleUrls: ['app/recent-games.component.css'],
+  templateUrl: 'app/games-list.component.html',
+  styleUrls: ['app/games-list.component.css'],
   directives: [GameDetailComponent],
 })
 export class RecentGamesComponent implements OnInit {
+  title = 'Recent Games';
   games: Game[];
 
   constructor(private gameService: GameService) { }
