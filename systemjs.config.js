@@ -7,7 +7,6 @@
     '@angular/router':            'node_modules/@angular/router',
     '@angular/forms':             'node_modules/@angular/forms',
     'rxjs':                       'node_modules/rxjs',
-    'ng2-meta':                   'node_modules/ng2-meta/dist/meta.service.js',
     'ts':                         'node_modules/plugin-typescript/lib/plugin.js',
     'typescript':                 'node_modules/typescript/lib/typescript.js',
   };
