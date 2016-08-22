@@ -1,6 +1,8 @@
-import { Component, Input, AfterContentInit, ViewChild } from '@angular/core';
+import { Component, Input, AfterContentInit, ElementRef, ViewChild } from '@angular/core';
 
 import { EncodePipe } from './encode.pipe';
+
+declare var FB: any;
 
 @Component({
   selector: 'facebook-share',
@@ -19,7 +21,7 @@ import { EncodePipe } from './encode.pipe';
   `,
 })
 export class FacebookShareComponent implements AfterContentInit {
-  @ViewChild('div') div;
+  @ViewChild('div') div: ElementRef;
   @Input() url: string;
 
   ngAfterContentInit() {

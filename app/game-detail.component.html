@@ -25,6 +25,6 @@
   <tr>
     <td>{{game.scheduled | date:'fullDate'}}</td>
     <td *ngIf="game.status == 'F'"></td>
-    <td><facebook-share url="https://hockeyscor.es/game/{{game.id}}"></facebook-share></td>
+    <td><facebook-share url="{{config.protocolAndHost}}/game/{{game.id}}"></facebook-share></td>
   </tr>
 </table>
