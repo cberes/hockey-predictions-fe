@@ -1,4 +1,4 @@
-import { Component, Input, AfterContentInit, ElementRef, ViewChild } from '@angular/core';
+import { Component, Input, AfterViewInit, ElementRef, ViewChild } from '@angular/core';
 
 import { EncodePipe } from './encode.pipe';
 
@@ -20,11 +20,11 @@ declare var FB: any;
              >Share</a></div>
   `,
 })
-export class FacebookShareComponent implements AfterContentInit {
+export class FacebookShareComponent implements AfterViewInit {
   @ViewChild('div') div: ElementRef;
   @Input() url: string;
 
-  ngAfterContentInit() {
+  ngAfterViewInit() {
     FB.XFBML.parse(this.div.nativeElement.parentNode);
   }
 }
