@@ -1,10 +1,11 @@
-import { RouterConfig, provideRouter } from '@angular/router';
+import { ModuleWithProviders } from '@angular/core';
+import { Routes, RouterModule } from '@angular/router';
 
 import { UpcomingGamesComponent } from './upcoming-games.component';
 import { RecentGamesComponent } from './recent-games.component';
 import { SingleGameComponent } from './single-game.component';
 
-export const appRoutes: RouterConfig = [
+const appRoutes: Routes = [
   {
     path: '',
     redirectTo: '/upcoming',
@@ -24,4 +25,4 @@ export const appRoutes: RouterConfig = [
   }
 ];
 
-export const APP_ROUTER_PROVIDERS = [provideRouter(appRoutes)];
+export const routing: ModuleWithProviders = RouterModule.forRoot(appRoutes);

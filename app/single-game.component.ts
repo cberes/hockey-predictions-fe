@@ -2,14 +2,12 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 
 import { Game } from './game';
-import { GameDetailComponent } from './game-detail.component';
 import { GameService } from './game.service';
 
 @Component({
   selector: 'single-game',
   templateUrl: 'app/games-list.component.html',
   styleUrls: ['app/games-list.component.css'],
-  directives: [GameDetailComponent],
 })
 export class SingleGameComponent implements OnInit {
   title: string;

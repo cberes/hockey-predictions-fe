@@ -1,14 +1,12 @@
 import { Component, Inject, Input, OnInit } from '@angular/core';
 
 import { APP_CONFIG, AppConfig } from './app.config';
-import { FacebookShareComponent } from './facebook-share.component';
 import { Game } from './game';
 
 @Component({
   selector: 'game-detail',
   templateUrl: 'app/game-detail.component.html',
   styleUrls: ['app/game-detail.component.css'],
-  directives: [FacebookShareComponent],
 })
 export class GameDetailComponent implements OnInit {
   @Input() game: Game;

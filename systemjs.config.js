@@ -1,53 +1,35 @@
 /** System configuration for Angular 2 */
 (function(global) {
+  // paths serve as alias
+  var paths = {
+    'npm:': 'node_modules/',
+  };
   // map tells the System loader where to look for things
   var map = {
     'app':                        'app',
-    '@angular':                   'node_modules/@angular',
-    '@angular/router':            'node_modules/@angular/router',
-    '@angular/forms':             'node_modules/@angular/forms',
-    'rxjs':                       'node_modules/rxjs',
-    'ts':                         'node_modules/plugin-typescript/lib/plugin.js',
-    'typescript':                 'node_modules/typescript/lib/typescript.js',
+
+    // angular
+    '@angular/core':              'npm:@angular/core/bundles/core.umd.js',
+    '@angular/common':            'npm:@angular/common/bundles/common.umd.js',
+    '@angular/compiler':          'npm:@angular/compiler/bundles/compiler.umd.js',
+    '@angular/platform-browser':  'npm:@angular/platform-browser/bundles/platform-browser.umd.js',
+    '@angular/platform-browser-dynamic': 'npm:@angular/platform-browser-dynamic/bundles/platform-browser-dynamic.umd.js',
+    '@angular/http':              'npm:@angular/http/bundles/http.umd.js',
+    '@angular/router':            'npm:@angular/router/bundles/router.umd.js',
+    '@angular/forms':             'npm:@angular/forms/bundles/forms.umd.js',
+
+    // other libraries
+    'rxjs':                       'npm:rxjs',
   };
   // packages tells the System loader how to load when no filename and/or no extension
   var packages = {
-    'app':                        { main: 'main.js',  defaultExtension: 'js' },
+    'app':                        { main: './main.js',  defaultExtension: 'js' },
     'rxjs':                       { defaultExtension: 'js' },
   };
-  var ngPackageNames = [
-    'common',
-    'compiler',
-    'core',
-    'forms',
-    'http',
-    'platform-browser',
-    'platform-browser-dynamic',
-    'router',
-    'upgrade',
-  ];
-  // Individual files (~300 requests):
-  function packIndex(pkgName) {
-    packages['@angular/'+pkgName] = { main: 'index.js', defaultExtension: 'js' };
-  }
-  // Bundled (~40 requests):
-  function packUmd(pkgName) {
-    packages['@angular/'+pkgName] = { main: 'bundles/' + pkgName + '.umd.js', defaultExtension: 'js' };
-  }
-  // Most environments should use UMD; some (Karma) need the individual index files
-  var setPackageConfig = System.packageWithIndex ? packIndex : packUmd;
-  // Add package entries for angular packages
-  ngPackageNames.forEach(setPackageConfig);
-
-  // No umd for router yet
-  packages['@angular/router'] = { main: 'index.js', defaultExtension: 'js' };
-
-  // Forms not on rc yet
-  packages['@angular/forms'] = { main: 'index.js', defaultExtension: 'js' };
-
   var config = {
+    paths: paths,
     map: map,
-    packages: packages
+    packages: packages,
   };
   System.config(config);
 })(this);

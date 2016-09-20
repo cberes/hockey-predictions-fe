@@ -1,8 +1,4 @@
 import { Component } from '@angular/core';
-import { ROUTER_DIRECTIVES } from '@angular/router';
-
-import { APP_CONFIG, HOCKEY_DI_CONFIG } from './app.config';
-import { GameService } from './game.service';
 
 @Component({
   selector: 'my-app',
@@ -29,11 +25,6 @@ import { GameService } from './game.service';
     </div>
   `,
   styleUrls: ['app/app.component.css'],
-  directives: [ROUTER_DIRECTIVES],
-  providers: [
-    { provide: APP_CONFIG, useValue: HOCKEY_DI_CONFIG },
-    GameService,
-  ],
 })
 export class AppComponent {
   title = 'Hockey Predictions';

@@ -1,12 +1,9 @@
 import { Component, Input, AfterViewInit, ElementRef, ViewChild } from '@angular/core';
 
-import { EncodePipe } from './encode.pipe';
-
 declare var FB: any;
 
 @Component({
   selector: 'facebook-share',
-  pipes: [EncodePipe],
   template: `
     <div #div
          class="fb-share-button"
