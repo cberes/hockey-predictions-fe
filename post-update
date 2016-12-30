@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+readonly user=hockey
+sudo -u $user -s -- 'rm app/*.js app/*.js.map; npm run tsc'
+
