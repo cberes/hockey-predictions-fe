@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+echo 'test'
 echo $GIT_DIR
 echo $GIT_WORK_TREE
 pwd
