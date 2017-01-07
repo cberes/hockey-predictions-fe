@@ -1,4 +1,0 @@
-#!/usr/bin/env bash
-rm app/*.js app/*.js.map
-npm run tsc
-
